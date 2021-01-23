@@ -4,4 +4,4 @@
 
 Материалы воркшопа:
 
-Проект в RStudio cloud: 
+Проект в RStudio cloud: https://rstudio.cloud/project/2100280
