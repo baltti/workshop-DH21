@@ -10,5 +10,5 @@
 
 Воркшоп по визуализации пространственных данных с помощью сервиса kepler.gl 
 
-Презентация:
+Презентация: https://github.com/baltti/workshop-DH21/blob/main/kepler_tutorial.pdf
 
