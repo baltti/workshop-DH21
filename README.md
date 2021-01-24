@@ -2,7 +2,7 @@
 
 Воркшоп по визуализации данных для SPB DHweek 2021 (29 января 2021), Центр Цифровых Гуманитарных Исследований Университета ИТМО
 
-Материалы воркшопа:
+Материалы воркшопа: https://baltti.github.io/workshop-DH21/ggplot2-tutorial-DH.html
 
 Проект в RStudio cloud: https://rstudio.cloud/project/2100280
 
