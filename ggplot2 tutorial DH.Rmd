@@ -14,7 +14,7 @@ editor_options:
 
 Материалы воркшопа в репозитории <https://github.com/baltti/workshop-DH21> и в канале <https://t.me/geomess>.
 
-Проект в RStudio cloud:
+Проект в RStudio cloud: <https://rstudio.cloud/project/2100280>
 
 ```{r setup, include=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -2811,7 +2811,7 @@ ggplot(russia_crops)+
 
 ------------------------------------------------------------------------
 
-## Матрица корреляции 
+## Матрица корреляции
 
 Для того, чтобы построить матрицу корреляции в виде графика нужно сначала ее посчитать, превратить в "длинную" таблицу, которую уже можно превратить в график с помощью `geom_tile`
 
