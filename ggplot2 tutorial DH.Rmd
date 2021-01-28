@@ -2450,7 +2450,9 @@ ggplot(key_crop_yields)+
        title = "Сбор сельскохозяйственной продукции")+
   facet_wrap(~crop+Entity, scales = "free")+
   theme(plot.title = element_text(size = 20,hjust = 0.5),
-        legend.position = "none")
+        legend.position = "none",
+        axis.text = element_text(size=5),
+        strip.text = element_text(size=7))
 
 ```
 
@@ -2466,7 +2468,9 @@ ggplot(key_crop_yields)+
        title = "Сбор сельскохозяйственной продукции")+
   facet_grid(crop~Entity, scales = "free")+
   theme(plot.title = element_text(size = 20,hjust = 0.5),
-        legend.position = "none")
+        legend.position = "none",
+        axis.text = element_text(size=5),
+        strip.text = element_text(size=7))
 
 ```
 
