@@ -2269,8 +2269,7 @@ ggplot(penguins %>% drop_na(bill_length_mm),
 ```{r out.width='100%', message=FALSE, echo=TRUE}
 key_crop_yields <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-01/key_crop_yields.csv') %>% 
   pivot_longer(cols = 4:14,names_to="crop",values_to="yield") %>% 
-         mutate(yield=as.numeric(yield)) %>% 
-  filter(Entity=="Russia") %>% 
+  mutate(yield=as.numeric(yield)) %>% 
   drop_na(yield) %>% 
   mutate(crop=case_when(
     crop=="Wheat (tonnes per hectare)"~"Пшеница",
@@ -2283,12 +2282,13 @@ key_crop_yields <- readr::read_csv('https://raw.githubusercontent.com/rfordatasc
     crop=="Barley (tonnes per hectare)"~"Ячмень"
   ))
 
-russia_crops<-key_crop_yields %>% filter(Entity=="Russia")
+russia_crops<-key_crop_yields %>% 
+  filter(Entity=="Russia")
 
 knitr::kable(head(russia_crops))
 ```
 
-Для построения линейного графика применяют функцию geom_line, для которой обязательными параметрами являются координаты x и y, при этом x обязательно должна идти в порядке возрастания
+Для построения линейного графика применяют функцию `geom_line`, для которой обязательными параметрами являются координаты x и y, при этом x обязательно должна идти в порядке возрастания
 
 ```{r out.width='100%', message=FALSE, echo=TRUE}
 ggplot(russia_crops %>% 
@@ -2304,13 +2304,7 @@ ggplot(russia_crops %>%
 ```
 
 Изменим вид линии.
-Основные типы линий доступные в `ggplot2`: 0."blank", 1.
-"solid", 2.
-"dashed", 3.
-"dotted", 4.
-"dotdash", 5.
-"longdash", 6.
-"twodash".
+Основные типы линий доступные в `ggplot2`: *0."blank", 1. "solid", 2. "dashed", 3. "dotted", 4. "dotdash", 5. "longdash", 6. "twodash"*.
 Тип линии можно указывать как порядковым номером, так и названием.
 
 ```{r out.width='100%', message=FALSE, echo=TRUE}
@@ -2662,7 +2656,7 @@ ggplot(russia_crops,aes(x=Year,y=yield,fill=crop))+
         axis.text.y = element_blank())
 ```
 
-Также сглаживание можно контролировать параметром n_grid
+Также сглаживание можно контролировать параметром `n_grid`
 
 ```{r out.width='100%', message=FALSE, echo=TRUE}
 ggplot(russia_crops,aes(x=Year,y=yield,fill=crop))+
